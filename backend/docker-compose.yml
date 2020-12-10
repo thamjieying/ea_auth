@@ -1,0 +1,18 @@
+version: "3.8"
+services: 
+  api: 
+    container_name: ea-auth-backend
+    build: .
+    command: npm start
+    volumes:
+      -"./bankend:/app"
+    ports:
+      - "3001:3001"
+    depends_on: 
+      - mongo
+
+  mongo:
+    container_name: ea-auth-mongo
+    image: mongo
+    ports: 
+      - "27017:27017"
