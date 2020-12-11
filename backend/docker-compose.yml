@@ -2,10 +2,8 @@ version: "3.8"
 services: 
   api: 
     container_name: ea-auth-backend
-    build: .
+    build: ./
     command: npm start
-    volumes:
-      -"./bankend:/app"
     ports:
       - "3001:3001"
     depends_on: 
