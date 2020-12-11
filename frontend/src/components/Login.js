@@ -45,6 +45,7 @@ const LoginForm = (props) => {
           fluid icon='user' 
           iconPosition='left' 
           placeholder='E-mail address' 
+          name="email"
           value={email}
           onChange={e=> setEmail(e.target.value)}
         />
@@ -53,6 +54,7 @@ const LoginForm = (props) => {
           icon='lock'
           iconPosition='left'
           placeholder='Password'
+          name="email"
           type='password'
           value={password}
           onChange={e => setPassword(e.target.value)}
@@ -63,6 +65,7 @@ const LoginForm = (props) => {
           fluid 
           size='large' 
           type='submit'
+          data-testid="loginSubmitBtn"
         >
           Login
         </Button>

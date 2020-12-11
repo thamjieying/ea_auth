@@ -25,7 +25,10 @@ function HomePage() {
 
   const renderNotification = () => {
     return showNotification ?
-      <Notification status={notificationStatus} message={notificationMsg} /> :
+      <Notification 
+        status={notificationStatus} message={notificationMsg}
+        data-testid='notification' 
+      /> :
       null
   }
 
@@ -46,7 +49,10 @@ function HomePage() {
       {renderForm()}
       <Message>
         {showSignUp ? 'Already have an account ' : 'Register for New Account '}
-        <Button onClick={() => setShowSignUp(!showSignUp)}>
+        <Button 
+          data-testid='signuptoggle'
+          onClick={() => setShowSignUp(!showSignUp)}
+        >
           {showSignUp ? 'Log-in' : 'Sign Up'}
         </Button>
       </Message>
