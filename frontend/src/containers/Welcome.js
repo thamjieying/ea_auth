@@ -13,12 +13,17 @@ function Welcome() {
 
   return (
     <Grid.Column style={{ maxWidth: 450 }}>
-      <Header icon>
+      <Header icon data-testid="welcomeText">
         <Icon name='building' />
         Welcome
       </Header>
       <Grid.Row>
-        <Button onClick={handleLogOut}>Log out</Button>
+        <Button 
+          onClick={handleLogOut}
+          data-testid="logoutBtn"
+        >
+          Log out
+        </Button>
       </Grid.Row>
     </Grid.Column>
   )

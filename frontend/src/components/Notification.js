@@ -30,8 +30,10 @@ const Notification = (props) => {
   }
 
   return (
-    <Message {...statusAttribute()}>
-      <Message.Header>
+    <Message {...statusAttribute()} data-testid="message">
+      <Message.Header
+        data-testid="messageHeader"
+      >
         {headerMessage()}
       </Message.Header>
       {message}
